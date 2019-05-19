@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import SquadForm from './components/SquadForm'
+import SquadList from './components/SquadList';
 
 // import './App.css';
 
@@ -11,7 +12,7 @@ function App() {
           <p>navbar</p>
           <Switch>
             <Route exact path="/" component={SquadForm}/>
-            {/* <Route path="/:id" component={SingleCreature}/> */}
+            <Route exact path="/squads" component={SquadList}/>
           </Switch>
         </div>
       </Router>

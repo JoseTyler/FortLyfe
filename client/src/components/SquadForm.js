@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from "axios";
+import {Redirect} from "react-router-dom"
 
 class SquadForm extends Component {
     state = {
@@ -8,7 +9,9 @@ class SquadForm extends Component {
             name: '',
             age: '',
             platform: ''
-        }
+        },
+        redirect: false
+
     }
 
     handleChange = (e) => {
@@ -19,14 +22,19 @@ class SquadForm extends Component {
 
     newSquad = (e) => {
         e.preventDefault()
-        axios.post("/api/v1/squad", this.state.formInfo) 
-        console.log("done")
+        axios.post("api/v1/squad", this.state.formInfo) 
+        this.setState({redirect: true}) 
     }
 
 
 
     render() {
+        
+        if(this.state.redirect){
+            return <Redirect to = "/squads"/>
+        }
         return (
+
             <div>
                 <form onSubmit={this.newSquad}>
                     <label htmlFor="gamertag">GamerTag:</label>
