@@ -8,5 +8,4 @@ const Gameplay = new Schema({
     url: String  
 })
 
-
 module.exports = mongoose.model('Gameplay', Gameplay)

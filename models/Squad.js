@@ -9,5 +9,4 @@ const Squad = new Schema({
     platform: String  
 })
 
-
 module.exports = mongoose.model('Squad', Squad)

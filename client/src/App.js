@@ -6,10 +6,12 @@ import SquadList from './components/SquadList';
 // import './App.css';
 
 function App() {
+
   return (
     <Router>
         <div>
           <p>navbar</p>
+         
           <Switch>
             <Route exact path="/" component={SquadForm}/>
             <Route exact path="/squads" component={SquadList}/>

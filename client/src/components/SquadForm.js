@@ -10,8 +10,7 @@ class SquadForm extends Component {
             age: '',
             platform: ''
         },
-        redirect: false
-
+        redirect: false,
     }
 
     handleChange = (e) => {
@@ -26,27 +25,22 @@ class SquadForm extends Component {
         this.setState({redirect: true}) 
     }
 
-
-
     render() {
-        
         if(this.state.redirect){
             return <Redirect to = "/squads"/>
         }
         return (
-
             <div>
                 <form onSubmit={this.newSquad}>
                     <label htmlFor="gamertag">GamerTag:</label>
-                    <input id="gamertag" name="gamertag" type="text" onChange={this.handleChange}/>
+                    <input id="gamertag" name="gamertag" placeholder="ex: Snype0nSyte77" type="text" onChange={this.handleChange}/>
                     <label htmlFor="name">Name:</label>
-                    <input id="name" name="name" type="text" onChange={this.handleChange}/>
+                    <input id="name" name="name" type="text" placeholder="ex: Adam Hues" onChange={this.handleChange}/>
                     <label htmlFor="age">Age:</label>
-                    <input id="age" name="age" type="text" onChange={this.handleChange}/>
+                    <input id="age" name="age" type="text" placeholder="ex: 22" onChange={this.handleChange}/>
                     <label htmlFor="platform">Platform:</label>
-                    <input id="platform" name="platform" type="text" onChange={this.handleChange}/>
-
-                    <button type="submit" >JOIN UP!</button>
+                    <input id="platform" name="platform" type="text" placeholder="ex: Playstation" onChange={this.handleChange}/>
+                    <button type="submit" >SQUAD UP!</button>
                 </form>
             </div>
         );

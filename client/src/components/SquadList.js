@@ -12,7 +12,7 @@ class SquadList extends Component {
     }
 
     getSquads = () => {
-        axios.get('api/v1/squad').then((res)=>{
+        axios.get('/api/v1/squad').then((res)=>{
             this.setState({squadInfo: res.data})
         })
     }
@@ -31,6 +31,7 @@ return (
     _id={spot._id}
     age={spot.age}
     platform={spot.platform}
+    getSquads={this.getSquads}
     />
 )
 
