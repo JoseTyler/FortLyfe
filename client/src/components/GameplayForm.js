@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from "axios";
 import {Redirect} from "react-router-dom"
 
-class GameForm extends Component {
+class GameplayForm extends Component {
     state = {
         formInfo: {
             gamertag: '',
@@ -33,11 +33,12 @@ class GameForm extends Component {
                     <label htmlFor="gamertag">GamerTag:</label>
                     <input id="gamertag" name="gamertag" placeholder="ex: Snype0nSyte77" type="text" onChange={this.handleChange}/>
                     <label htmlFor="name">Name:</label>
-                    <input id="URL" name="name" type="text" placeholder="ex: youtube.com/fortniteclips" onChange={this.handleChange}/>
+                    <input id="url" name="name" type="text" placeholder="ex: youtube.com/fortniteclips" onChange={this.handleChange}/>
+                    <button type="submit" >SHOW OFF!</button>
                 </form>
             </div>
         );
     }
 }
 
-export default GameForm;
+export default GameplayForm;

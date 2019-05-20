@@ -33,7 +33,6 @@ const gameController = {
       res.send(200);
     });
   }
-
 };
 
 // EXPORTS
