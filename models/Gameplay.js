@@ -5,7 +5,7 @@ const Schema = mongoose.Schema
 const Gameplay = new Schema({
     gamertag: String,
     name: String,
-    url: String  
+    url: String
 })
 
 module.exports = mongoose.model('Gameplay', Gameplay)

@@ -6,7 +6,7 @@ const Squad = new Schema({
     gamertag: String,
     name: String,
     age: String,
-    platform: String  
+    platform: String
 })
 
 module.exports = mongoose.model('Squad', Squad)

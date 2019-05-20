@@ -7,7 +7,7 @@ const gameController = {
       res.send(Gme)
     });
   },
-  
+
   // SHOW
   show: function (req, res) {
     Gameplay.findById(req.params.id).then(Gme => {
@@ -22,9 +22,9 @@ const gameController = {
 
   //UPDATE
   update: function (req, res) {
-     Gameplay.findByIdAndUpdate(req.params.id, req.body, { new: true }).then(() => {
-        res.send(200);
-      });
+    Gameplay.findByIdAndUpdate(req.params.id, req.body, { new: true }).then(() => {
+      res.send(200);
+    });
   },
 
   // DELETE

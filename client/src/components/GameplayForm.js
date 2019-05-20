@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from "axios";
-import {Redirect} from "react-router-dom"
+import { Redirect } from "react-router-dom"
 
 class GameplayForm extends Component {
     state = {
@@ -12,28 +12,28 @@ class GameplayForm extends Component {
     }
 
     handleChange = (e) => {
-        const copyOfFormInfo = {...this.state.formInfo}
+        const copyOfFormInfo = { ...this.state.formInfo }
         copyOfFormInfo[e.target.name] = e.target.value
-        this.setState({formInfo: copyOfFormInfo})
-      }
+        this.setState({ formInfo: copyOfFormInfo })
+    }
 
     newGameplay = (e) => {
         e.preventDefault()
-        axios.post("api/v1/game", this.state.formInfo) 
-        this.setState({redirect: true}) 
+        axios.post("api/v1/game", this.state.formInfo)
+        this.setState({ redirect: true })
     }
 
     render() {
-        if(this.state.redirect){
-            return <Redirect to = "/gameplays"/>
+        if (this.state.redirect) {
+            return <Redirect to="/gameplays" />
         }
         return (
             <div>
                 <form onSubmit={this.newGameplay}>
                     <label htmlFor="gamertag">GamerTag:</label>
-                    <input id="gamertag" name="gamertag" placeholder="ex: Snype0nSyte77" type="text" onChange={this.handleChange}/>
+                    <input id="gamertag" name="gamertag" placeholder="ex: Snype0nSyte77" type="text" onChange={this.handleChange} />
                     <label htmlFor="name">Name:</label>
-                    <input id="url" name="name" type="text" placeholder="ex: youtube.com/fortniteclips" onChange={this.handleChange}/>
+                    <input id="url" name="name" type="text" placeholder="ex: youtube.com/fortniteclips" onChange={this.handleChange} />
                     <button type="submit" >SHOW OFF!</button>
                 </form>
             </div>

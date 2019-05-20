@@ -7,7 +7,7 @@ const squadController = {
       res.send(Sqd)
     });
   },
-  
+
   // SHOW
   show: function (req, res) {
     Squad.findById(req.params.id).then(Sqd => {
@@ -22,9 +22,9 @@ const squadController = {
 
   //UPDATE
   update: function (req, res) {
-     Squad.findByIdAndUpdate(req.params.id, req.body, { new: true }).then(() => {
-        res.send(200);
-      });
+    Squad.findByIdAndUpdate(req.params.id, req.body, { new: true }).then(() => {
+      res.send(200);
+    });
   },
 
   // DELETE

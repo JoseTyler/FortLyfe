@@ -4,16 +4,16 @@ import Squad from './Squad';
 
 class SquadList extends Component {
     state = {
-        squadInfo:[]
+        squadInfo: []
     }
 
-    componentDidMount(){
+    componentDidMount() {
         this.getSquads()
     }
 
     getSquads = () => {
-        axios.get('/api/v1/squad').then((res)=>{
-            this.setState({squadInfo: res.data})
+        axios.get('/api/v1/squad').then((res) => {
+            this.setState({ squadInfo: res.data })
         })
     }
 
@@ -21,19 +21,17 @@ class SquadList extends Component {
         return (
             <div>
                 Im a squadlist
-                {this.state.squadInfo.map((spot, index )=>{
-
-return (
-   
-    <Squad key={index} 
-    gamertag={spot.gamertag}
-    name={spot.name}
-    _id={spot._id}
-    age={spot.age}
-    platform={spot.platform}
-    getSquads={this.getSquads}
-    />
-)
+                {this.state.squadInfo.map((spot, index) => {
+                    return (
+                        <Squad key={index}
+                            gamertag={spot.gamertag}
+                            name={spot.name}
+                            _id={spot._id}
+                            age={spot.age}
+                            platform={spot.platform}
+                            getSquads={this.getSquads}
+                        />
+                    )
 
                 })}
             </div>

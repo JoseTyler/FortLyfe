@@ -16,8 +16,8 @@ function App() {
           <Switch>
             <Route exact path="/" component={SquadForm}/>
             <Route exact path="/squads" component={SquadList}/>
-            <Route exact path="/game" component={GameplayForm}/>
-            <Route exact path="/gameplay" component={GameplayList}/>
+            <Route exact path="/gameplay" component={GameplayForm}/>
+            <Route exact path="/gameplays" component={GameplayList}/>
           </Switch>
         </div>
       </Router>
