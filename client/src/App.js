@@ -12,7 +12,7 @@ function App() {
   return (
     <Router>
         <div>
-          navbar
+          <Link to ={'/'}/><button>Home</button>
           <Switch>
             <Route exact path="/" component={SquadForm}/>
             <Route exact path="/squads" component={SquadList}/>

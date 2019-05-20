@@ -28,6 +28,7 @@ class GameplayList extends Component {
                             gamertag={spot.gamertag}
                             _id={spot._id}
                             getGameplays={this.getGameplays}
+                            url={spot.url}
                         />
                     )
                 })}

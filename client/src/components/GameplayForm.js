@@ -6,7 +6,7 @@ class GameplayForm extends Component {
     state = {
         formInfo: {
             gamertag: '',
-            video: ''
+            url: ''
         },
         redirect: false,
     }
@@ -29,11 +29,12 @@ class GameplayForm extends Component {
         }
         return (
             <div>
+                
                 <form onSubmit={this.newGameplay}>
                     <label htmlFor="gamertag">GamerTag:</label>
                     <input id="gamertag" name="gamertag" placeholder="ex: Snype0nSyte77" type="text" onChange={this.handleChange} />
-                    <label htmlFor="name">Name:</label>
-                    <input id="url" name="name" type="text" placeholder="ex: youtube.com/fortniteclips" onChange={this.handleChange} />
+                    <label htmlFor="url">Name:</label>
+                    <input id="url" name="url" type="text" placeholder="ex: youtube.com/fortniteclips" onChange={this.handleChange} />
                     <button type="submit" >SHOW OFF!</button>
                 </form>
             </div>

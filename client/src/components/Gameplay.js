@@ -41,21 +41,11 @@ class Gameplay extends Component {
         return (
             <div>
                 {this.state.showForm
-                    ? <form onSubmit={this.updatePlayer}>
-                        <label htmlFor="gamertag">GamerTag:</label>
-                        <input id="gamertag" name="gamertag" type="text" placeholder={this.props.gamertag} onChange={this.handleChange} />
-                        <label htmlFor="name">Name:</label>
-                        <input id="name" name="name" type="text" placeholder={this.props.name} onChange={this.handleChange} />
-                        <label htmlFor="age">Age:</label>
-                        <input id="age" name="age" type="text" placeholder={this.props.age} onChange={this.handleChange} />
-                        <label htmlFor="platform">Platform:</label>
-                        <input id="platform" name="platform" type="text" placeholder={this.props.platform} onChange={this.handleChange} />
-
-                        <button type="submit" >SUBMIT EDIT!</button>
-                    </form>
+                    ? null
                     : <div>
                         <p>{this.props.gamertag} </p>
                         <p>{this.props.url}</p>
+                        <iframe width="953" height="536" src={this.state.formInfo.url} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         <button onClick={this.deleteGameplay}>Delete Gameplay</button>
                     </div>
                 }
@@ -65,3 +55,6 @@ class Gameplay extends Component {
 }
 
 export default Gameplay;
+
+
+
