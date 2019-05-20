@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import GameplayList from './GameplayList';
+import Gameplay from './Gameplay';
 
 class GameplayList extends Component {
     state = {
@@ -24,7 +24,7 @@ class GameplayList extends Component {
                 {this.state.gameplayInfo.map((spot, index )=>{
 
 return ( 
-    <Squad key={index} 
+    <Gameplay key={index} 
     gamertag={spot.gamertag}
     _id={spot._id}
     getGameplays={this.getGameplays}

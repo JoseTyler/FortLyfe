@@ -14,9 +14,7 @@ class Gameplay extends Component {
     componentDidMount(){
         let copyOfFormInfo = this.state.formInfo
         copyOfFormInfo.gamertag = this.props.gamertag
-        copyOfFormInfo.name = this.props.name
-        copyOfFormInfo.age = this.props.age
-        copyOfFormInfo.platform = this.props.platform
+        copyOfFormInfo.url = this.props.url
         copyOfFormInfo._id = this.props._id
         this.setState({
             formInfo: copyOfFormInfo
@@ -60,7 +58,7 @@ class Gameplay extends Component {
                         <p>{this.props.platform}</p>
                         <p>{this.props.age}</p>
                         <p>{this.props.gamertag} </p>
-                        <button onClick={this.deletePlayer}>Delete Player</button>
+                        <button onClick={this.deleteGameplay}>Delete Gameplay</button>
                     </div>
                 }
             </div>
