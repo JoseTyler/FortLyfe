@@ -25,17 +25,13 @@ router.put('/squad/:id', squadController.update)
 // INDEX GAMEPLAY
 router.get('/game/', gameController.index)
 
+// CREATE GAMEPLAY
+router.post('/game/', gameController.create)
+
 // DELETE GAMEPLAY
 router.delete('/game/:id', gameController.delete)
 
 // SHOW GAMEPLAY
 router.get('/game/:id', gameController.show)
-
-// CREATE GAMEPLAY
-router.post('/game/', gameController.create)
-
-// PUT GAMEPLAY
-router.put('/game/:id', gameController.update)
-
 
 module.exports = router

@@ -17,27 +17,27 @@ class GameForm extends Component {
         this.setState({formInfo: copyOfFormInfo})
       }
 
-    newSquad = (e) => {
+    newGameplay = (e) => {
         e.preventDefault()
-        axios.post("api/v1/squad", this.state.formInfo) 
+        axios.post("api/v1/game", this.state.formInfo) 
         this.setState({redirect: true}) 
     }
 
     render() {
         if(this.state.redirect){
-            return <Redirect to = "/squads"/>
+            return <Redirect to = "/gameplays"/>
         }
         return (
             <div>
-                <form onSubmit={this.newSquad}>
+                <form onSubmit={this.newGameplay}>
                     <label htmlFor="gamertag">GamerTag:</label>
                     <input id="gamertag" name="gamertag" placeholder="ex: Snype0nSyte77" type="text" onChange={this.handleChange}/>
                     <label htmlFor="name">Name:</label>
-                    <input id="name" name="name" type="text" placeholder="ex: Adam Hues" onChange={this.handleChange}/>
+                    <input id="URL" name="name" type="text" placeholder="ex: youtube.com/fortniteclips" onChange={this.handleChange}/>
                 </form>
             </div>
         );
     }
 }
 
-export default SquadForm;
+export default GameForm;

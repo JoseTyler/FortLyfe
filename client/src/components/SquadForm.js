@@ -30,7 +30,8 @@ class SquadForm extends Component {
             return <Redirect to = "/squads"/>
         }
         return (
-            <div>
+            <div >
+                 <p>navbar</p>
                 <form onSubmit={this.newSquad}>
                     <label htmlFor="gamertag">GamerTag:</label>
                     <input id="gamertag" name="gamertag" placeholder="ex: Snype0nSyte77" type="text" onChange={this.handleChange}/>

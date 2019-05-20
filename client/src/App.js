@@ -10,8 +10,7 @@ function App() {
   return (
     <Router>
         <div>
-          <p>navbar</p>
-         
+         add background here
           <Switch>
             <Route exact path="/" component={SquadForm}/>
             <Route exact path="/squads" component={SquadList}/>

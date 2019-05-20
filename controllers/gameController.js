@@ -3,15 +3,15 @@ const Gameplay = require("../models/Gameplay");
 const gameController = {
   // INDEX
   index: function (req, res) {
-    Gameplay.find().then(Sqd => {
-      res.send(Sqd)
+    Gameplay.find().then(Gme => {
+      res.send(Gme)
     });
   },
   
   // SHOW
   show: function (req, res) {
-    Gameplay.findById(req.params.id).then(Sqd => {
-      res.send(Sqd);
+    Gameplay.findById(req.params.id).then(Gme => {
+      res.send(Gme);
     });
   },
 
