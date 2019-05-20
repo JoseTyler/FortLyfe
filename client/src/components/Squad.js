@@ -69,7 +69,7 @@ class Squad extends Component {
                         <p>{this.props.name}</p>
                         <p>{this.props.platform}</p>
                         <p>{this.props.age}</p>
-                        <p>{this.props.gamertag} </p>
+                        <p>{this.props.gamertag}</p>
 
                         <button onClick={this.swapForm}>Edit Player</button>
                         <button onClick={this.deletePlayer}>Delete Player</button>

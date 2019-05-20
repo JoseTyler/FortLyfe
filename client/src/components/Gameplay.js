@@ -23,7 +23,7 @@ class Gameplay extends Component {
 
     deleteGameplay = () => {
         console.log(this.props._id)
-        axios.delete(`api/v1/game/${this.props._id}`)
+        axios.delete(`api/v1/gameplay/${this.props._id}`)
         this.props.getGameplays()
     }
 

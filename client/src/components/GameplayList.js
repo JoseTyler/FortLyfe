@@ -12,7 +12,7 @@ class GameplayList extends Component {
     }
 
     getGameplays = () => {
-        axios.get('/api/v1/gameplays').then((res) => {
+        axios.get('/api/v1/gameplay').then((res) => {
             this.setState({ gameplayInfo: res.data })
         })
     }

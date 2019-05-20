@@ -19,7 +19,7 @@ class GameplayForm extends Component {
 
     newGameplay = (e) => {
         e.preventDefault()
-        axios.post("api/v1/game", this.state.formInfo)
+        axios.post("api/v1/gameplay", this.state.formInfo)
         this.setState({ redirect: true })
     }
 
