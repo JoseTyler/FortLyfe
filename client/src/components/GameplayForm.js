@@ -1,6 +1,15 @@
 import React, { Component } from 'react';
 import axios from "axios";
 import { Redirect } from "react-router-dom"
+import styled from 'styled-components'
+import img from '../images/Page3.png'
+
+const Body = styled.div`
+background-image: url(${img});
+height: 100vh;
+width: 100vw;
+background-size: cover;
+`
 
 class GameplayForm extends Component {
     state = {
@@ -29,7 +38,7 @@ class GameplayForm extends Component {
         }
         return (
             <div>
-                
+                <Body> 
                 <form onSubmit={this.newGameplay}>
                     <label htmlFor="gamertag">GamerTag:</label>
                     <input id="gamertag" name="gamertag" placeholder="ex: Snype0nSyte77" type="text" onChange={this.handleChange} />
@@ -37,6 +46,7 @@ class GameplayForm extends Component {
                     <input id="url" name="url" type="text" placeholder="ex: youtube.com/fortniteclips" onChange={this.handleChange} />
                     <button type="submit" >SHOW OFF!</button>
                 </form>
+                </Body>
             </div>
         );
     }

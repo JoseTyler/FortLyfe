@@ -1,6 +1,16 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Gameplay from './Gameplay';
+import styled from 'styled-components'
+import img from '../images/Page4.png'
+
+
+const Body = styled.div`
+background-image: url(${img});
+height: 100vh;
+width: 100vw;
+background-size: cover;
+`
 
 class GameplayList extends Component {
     state = {
@@ -20,9 +30,8 @@ class GameplayList extends Component {
     render() {
         return (
             <div>
-                Im a Gameplaylist
+                <Body> 
                 {this.state.gameplayInfo.map((spot, index) => {
-
                     return (
                         <Gameplay key={index}
                             gamertag={spot.gamertag}
@@ -32,9 +41,14 @@ class GameplayList extends Component {
                         />
                     )
                 })}
+                </Body>
             </div>
         );
     }
 }
+
+
+
+
 
 export default GameplayList;

@@ -1,6 +1,16 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Squad from './Squad';
+import styled from 'styled-components'
+import img from '../images/Page2.png'
+
+
+const Body = styled.div`
+background-image: url(${img});
+height: 100vh;
+width: 100vw;
+background-size: cover;
+`
 
 class SquadList extends Component {
     state = {
@@ -20,6 +30,7 @@ class SquadList extends Component {
     render() {
         return (
             <div>
+                <Body> 
                 Im a squadlist
                 {this.state.squadInfo.map((spot, index) => {
                     return (
@@ -34,6 +45,7 @@ class SquadList extends Component {
                     )
 
                 })}
+                </Body>
             </div>
         );
     }

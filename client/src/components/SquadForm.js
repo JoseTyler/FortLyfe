@@ -1,7 +1,18 @@
 import React, { Component } from 'react';
 import axios from "axios";
 import { Redirect } from "react-router-dom";
-import styled from 'styled-components'
+import styled from 'styled-components';
+import img from "../images/Page1.png"
+
+const Body = styled.div`
+background-image: url(${img});
+height: 100vh;
+width: 100vw;
+background-size: cover;
+`
+
+
+
 
 class SquadForm extends Component {
     state = {
@@ -32,6 +43,7 @@ class SquadForm extends Component {
         }
         return (
             <div>
+                <Body>
                 
                 <form onSubmit={this.newSquad}>
                     <label htmlFor="gamertag">GamerTag:</label>
@@ -44,9 +56,14 @@ class SquadForm extends Component {
                     <input id="platform" name="platform" type="text" placeholder="ex: Playstation" onChange={this.handleChange} />
                     <button type="submit" >SQUAD UP!</button>
                 </form>
+                </Body>
             </div>
         );
     }
 }
 
 export default SquadForm;
+
+
+
+
