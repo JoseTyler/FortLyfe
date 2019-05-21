@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from "axios";
-import { Redirect } from "react-router-dom"
+import { Redirect } from "react-router-dom";
+import styled from 'styled-components'
 
 class SquadForm extends Component {
     state = {
@@ -31,6 +32,7 @@ class SquadForm extends Component {
         }
         return (
             <div>
+                
                 <form onSubmit={this.newSquad}>
                     <label htmlFor="gamertag">GamerTag:</label>
                     <input id="gamertag" name="gamertag" placeholder="ex: Snype0nSyte77" type="text" onChange={this.handleChange} />

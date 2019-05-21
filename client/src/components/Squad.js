@@ -62,17 +62,16 @@ class Squad extends Component {
                         <input id="age" name="age" type="text" placeholder={this.props.age} onChange={this.handleChange} />
                         <label htmlFor="platform">Platform:</label>
                         <input id="platform" name="platform" type="text" placeholder={this.props.platform} onChange={this.handleChange} />
-
-                        <button type="submit" >SUBMIT EDIT!</button>
+                        <button onClick={this.setState.swapForm} >SUBMIT EDIT!</button>
                     </form>
                     : <div>
-                        <p>{this.props.name}</p>
-                        <p>{this.props.platform}</p>
-                        <p>{this.props.age}</p>
-                        <p>{this.props.gamertag}</p>
+                        <p>Gamertag: {this.props.gamertag}</p>
+                        <p>Name: {this.props.name}</p>
+                        <p>Age: {this.props.age}</p>
+                        <p>Platform: {this.props.platform}</p>
 
-                        <button onClick={this.swapForm}>Edit Player</button>
-                        <button onClick={this.deletePlayer}>Delete Player</button>
+                        <button onClick={this.swapForm}>EDIT PLAYER</button>
+                        <button onClick={this.deletePlayer}>DELETE PLAYER</button>
                     </div>
                 }
             </div>
