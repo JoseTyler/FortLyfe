@@ -6,7 +6,7 @@ The 1st model will display a form where players can submit their "Gamer Tag, Nam
 Once they submit the form, a page displaying all "freeagents" information will show.
 
 The 2nd model will allow players to add their gamertags & upload Youtube links to show visitors how good their gameplay really is.
-Once they submit their video, a page will open displaying all videos that have been added previously.
+Once they submit their video, a page will open displaying all videos that have been added previously along with their gamertags.
 
 My TrelloBoard link is https://trello.com/b/gnKhOhye/project-3
 
