@@ -3,10 +3,12 @@ import axios from 'axios';
 import styled from 'styled-components';
 
 
+// StyleSheet For Gameplay Component
+
 const Div = styled.div`
-padding-left: 120px;
-padding-top: 170px;
-`
+    padding-left: 120px;
+    padding-top: 170px;
+    `;
 
 const Button = styled.button`
     height:30px;
@@ -15,7 +17,10 @@ const Button = styled.button`
     position: relative;
     right: 300px;
     top: 35px;
-`;
+    `;
+
+
+// Gameplay Component
 
 class Gameplay extends Component {
     state = {
@@ -25,8 +30,8 @@ class Gameplay extends Component {
             url: '',
             _id: ''
         }
-
     }
+
     componentDidMount() {
         let copyOfFormInfo = this.state.formInfo
         copyOfFormInfo.gamertag = this.props.gamertag
@@ -71,5 +76,3 @@ class Gameplay extends Component {
 }
 
 export default Gameplay;
-
-

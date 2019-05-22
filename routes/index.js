@@ -4,7 +4,6 @@ const squadController = require('../controllers/squadController')
 const gameController = require('../controllers/gameController')
 
 // INDEX SQUAD
-//START: api/v1
 router.get('/squad/', squadController.index)
 
 // CREATE SQUAD
@@ -18,7 +17,6 @@ router.get('/squad/:id', squadController.show)
 
 // PUT SQUAD
 router.put('/squad/:id', squadController.update)
-
 
 //================================================
 

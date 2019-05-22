@@ -3,17 +3,18 @@ import axios from 'axios';
 import styled from 'styled-components'
 
 
+// StyleSheet For Squad Component
+
 const P = styled.a`
-font-size: 20px;
-display: flex;
-flex-direction: column;
-padding-left: 110px;
-`;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 110px;
+    `;
 
 const Info = styled.div`
-padding-top: 200px;
-`;
-
+    padding-top: 200px;
+    `;
 
 const Button = styled.button`
     height: 25px;
@@ -23,12 +24,10 @@ const Button = styled.button`
     left: 98px;
     top: 15px;
     border: solid black 2px;
-`;
+    `;
 
 
-
-
-
+// Squad Component
 
 class Squad extends Component {
     state = {
@@ -40,7 +39,6 @@ class Squad extends Component {
             platform: '',
             _id: ''
         }
-
     }
     componentDidMount() {
         let copyOfFormInfo = this.state.formInfo

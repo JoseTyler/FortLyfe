@@ -5,18 +5,18 @@ import styled from 'styled-components';
 import img from "../images/Page1.png"
 
 
-// STYLING COMPONENT
+// // StyleSheet For SquadForm Component
 const Header = styled.div`
-font-size: 30px;
-position: relative;
-top: 8px;
-left: 60px;
-display: flex;
-justify-content:space-evenly;
-width: 40vw;
-color:solid white;
-font-family: DK Rumpelstiltskin;
-`;
+    font-size: 30px;
+    position: relative;
+    top: 8px;
+    left: 60px;
+    display: flex;
+    justify-content:space-evenly;
+    width: 40vw;
+    color:solid white;
+    font-family: DK Rumpelstiltskin;
+    `;
 
 const Body = styled.div`
     background-image: url(${img});
@@ -27,24 +27,22 @@ const Body = styled.div`
     `;
 
 const Form = styled.form`
-    font-size: 40px;
+    font-size: 35px;
     display: block;
     flex-direction: column;
     align-items:center;
     height: 50vh;
     padding-left: 960px;
-    padding-top: 350px;
-    font-family: Mushy Love;
-    
-`;
+    padding-top: 335px;
+    font-family: Mushy Love;  
+    `;
 
 const Inputy = styled.input`
     display: block;
     height:30px;
     width:300px;
-    font-size: 20px;
-    
-`;
+    font-size: 20px;  
+    `;
 
 const Button = styled.button`
     height:30px;
@@ -52,11 +50,12 @@ const Button = styled.button`
     background-color: green;
     position: relative;
     left: 90px;
-    top: 25px;
+    top: 15px;
     border: solid black 2px;
-`;
+    `;
 
 
+// SquadForm Component
 
 class SquadForm extends Component {
     state = {
@@ -97,17 +96,15 @@ class SquadForm extends Component {
 
                     <Form onSubmit={this.newSquad}>
                         <label htmlFor="gamertag">GAMERTAG:</label>
-                        <Inputy id="gamertag" name="gamertag" placeholder="ex: Snype0nSyte77" type="text" onChange={this.handleChange} />
+                        <Inputy id="gamertag" name="gamertag" placeholder="Ex: Snype0nSyte77" type="text" onChange={this.handleChange} />
                         <label htmlFor="name">NAME:</label>
-                        <Inputy id="name" name="name" type="text" placeholder="ex: Adam Hues" onChange={this.handleChange} />
+                        <Inputy id="name" name="name" type="text" placeholder="Ex: Adam Hues" onChange={this.handleChange} />
                         <label htmlFor="age">AGE:</label>
-                        <Inputy id="age" name="age" type="text" placeholder="ex: 22" onChange={this.handleChange} />
+                        <Inputy id="age" name="age" type="text" placeholder="Ex: 22" onChange={this.handleChange} />
                         <label htmlFor="platform">PLATFORM:</label>
-                        <Inputy id="platform" name="platform" type="text" placeholder="ex: Playstation" onChange={this.handleChange} />
+                        <Inputy id="platform" name="platform" type="text" placeholder="Ex: Playstation" onChange={this.handleChange} />
                         <Button type="submit">SQUAD UP!</Button>
                     </Form>
-
-
                 </Body>
             </div>
         );

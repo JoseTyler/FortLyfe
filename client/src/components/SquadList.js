@@ -5,6 +5,8 @@ import styled from 'styled-components'
 import img from '../images/Page2.png'
 import { Link } from "react-router-dom"
 
+// StyleSheet For SquadList Component
+
 const Header = styled.div`
 font-size: 30px;
 position: relative;
@@ -23,11 +25,9 @@ const Body = styled.div`
     width: 100vw;
     background-size: cover;
     position: sticky;
-    
     `;
 
-
-
+// SquadList Component
 
 class SquadList extends Component {
     state = {
