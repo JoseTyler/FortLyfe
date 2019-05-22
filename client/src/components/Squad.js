@@ -69,7 +69,6 @@ class Squad extends Component {
                         <p>Name: {this.props.name}</p>
                         <p>Age: {this.props.age}</p>
                         <p>Platform: {this.props.platform}</p>
-
                         <button onClick={this.swapForm}>EDIT PLAYER</button>
                         <button onClick={this.deletePlayer}>DELETE PLAYER</button>
                     </div>

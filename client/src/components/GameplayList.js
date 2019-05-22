@@ -3,7 +3,12 @@ import axios from 'axios';
 import Gameplay from './Gameplay';
 import styled from 'styled-components'
 import img from '../images/Page4.png'
+import { Link } from "react-router-dom"
 
+const Header = styled.div`
+font-size: 20px;
+text-decoration: none;
+`;
 
 const Body = styled.div`
 background-image: url(${img});
@@ -30,7 +35,13 @@ class GameplayList extends Component {
     render() {
         return (
             <div>
-                <Body> 
+                <Body>
+                <Header>
+                        <Link to={'/'}>Home</Link>
+                        <Link to={'/squads'}>Squads</Link>
+                        <Link to={'/gameplay'}>Showoff</Link>
+                        <Link to={'/gameplays'}>Showdown</Link>
+                    </Header>
                 {this.state.gameplayInfo.map((spot, index) => {
                     return (
                         <Gameplay key={index}

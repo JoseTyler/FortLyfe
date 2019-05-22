@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
 import axios from "axios";
-import { Redirect } from "react-router-dom"
+import { Redirect, Link } from "react-router-dom"
 import styled from 'styled-components'
 import img from '../images/Page3.png'
+
+const Header = styled.div`
+font-size: 20px;
+text-decoration: none;
+`;
 
 const Body = styled.div`
 background-image: url(${img});
@@ -38,7 +43,13 @@ class GameplayForm extends Component {
         }
         return (
             <div>
-                <Body> 
+                <Body>
+                <Header>
+                        <Link to={'/'}>Home</Link>
+                        <Link to={'/squads'}>Squads</Link>
+                        <Link to={'/gameplay'}>Showoff</Link>
+                        <Link to={'/gameplays'}>Showdown</Link>
+                    </Header>
                 <form onSubmit={this.newGameplay}>
                     <label htmlFor="gamertag">GamerTag:</label>
                     <input id="gamertag" name="gamertag" placeholder="ex: Snype0nSyte77" type="text" onChange={this.handleChange} />
