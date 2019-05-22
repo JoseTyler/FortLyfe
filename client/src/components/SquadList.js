@@ -6,8 +6,11 @@ import img from '../images/Page2.png'
 import { Link } from "react-router-dom"
 
 const Header = styled.div`
-font-size: 20px;
-text-decoration: none;
+font-size: 30px;
+display: flex;
+justify-content:space-evenly;
+width: 50vw;
+color:solid white;
 `;
 
 
@@ -20,7 +23,7 @@ const Body = styled.div`
     
     `;
 
-    
+
 
 
 class SquadList extends Component {
@@ -42,28 +45,28 @@ class SquadList extends Component {
         return (
             <div>
                 <Body>
-                <Header>
-                        <Link to={'/'}>Home</Link>
-                        <Link to={'/squads'}>Squads</Link>
-                        <Link to={'/gameplay'}>Showoff</Link>
-                        <Link to={'/gameplays'}>Showdown</Link>
+                    <Header>
+                        <Link to={'/'} style={{ textDecoration: 'none', color: 'white' }}>HOME</Link>
+                        <Link to={'/squads'} style={{ textDecoration: 'none', color: 'white' }}>SQUAD</Link>
+                        <Link to={'/gameplay'} style={{ textDecoration: 'none', color: 'white' }}>SHOWOFF</Link>
+                        <Link to={'/gameplays'} style={{ textDecoration: 'none', color: 'white' }}>SHOWLIST</Link>
                     </Header>
-                {this.state.squadInfo.map((spot, index) => {
-                    return (
-                        
-                        <Squad 
-                            key={index}
-                            gamertag={spot.gamertag}
-                            name={spot.name}
-                            _id={spot._id}
-                            age={spot.age}
-                            platform={spot.platform}
-                            getSquads={this.getSquads}
-                        />
-                        
-                    )
+                    {this.state.squadInfo.map((spot, index) => {
+                        return (
 
-                })}
+                            <Squad
+                                key={index}
+                                gamertag={spot.gamertag}
+                                name={spot.name}
+                                _id={spot._id}
+                                age={spot.age}
+                                platform={spot.platform}
+                                getSquads={this.getSquads}
+                            />
+
+                        )
+
+                    })}
                 </Body>
             </div>
         );

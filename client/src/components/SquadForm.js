@@ -85,10 +85,10 @@ class SquadForm extends Component {
             <div>
                 <Body>
                     <Header>
-                        <Link to={'/'} style={{ textDecoration: 'none' }}>HOME</Link>
-                        <Link to={'/squads'} style={{ textDecoration: 'none' }}>SQUAD</Link>
-                        <Link to={'/gameplay'} style={{ textDecoration: 'none' }}>SHOWOFF</Link>
-                        <Link to={'/gameplays'} style={{ textDecoration: 'none' }}>SHOWLIST</Link>
+                        <Link to={'/'} style={{ textDecoration: 'none', color: 'white' }}>HOME</Link>
+                        <Link to={'/squads'} style={{ textDecoration: 'none', color: 'white' }}>SQUAD</Link>
+                        <Link to={'/gameplay'} style={{ textDecoration: 'none', color: 'white' }}>SHOWOFF</Link>
+                        <Link to={'/gameplays'} style={{ textDecoration: 'none',color: 'white' }}>SHOWLIST</Link>
                     </Header>
                     
                         <Form onSubmit={this.newSquad}>

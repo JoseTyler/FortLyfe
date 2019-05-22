@@ -6,9 +6,11 @@ import img from '../images/Page4.png'
 import { Link } from "react-router-dom"
 
 const Header = styled.div`
-font-size: 20px;
-text-decoration: none;
-border-bottom: none;
+font-size: 30px;
+display: flex;
+justify-content:space-evenly;
+width: 50vw;
+color:solid white;
 `;
 
 
@@ -40,22 +42,22 @@ class GameplayList extends Component {
         return (
             <div>
                 <Body>
-                <Header>
-                        <Link to={'/'}>Home</Link>
-                        <Link to={'/squads'}>Squads</Link>
-                        <Link to={'/gameplay'}>Showoff</Link>
-                        <Link to={'/gameplays'}>Showdown</Link>
+                    <Header>
+                        <Link to={'/'} style={{ textDecoration: 'none', color: 'white' }}>HOME</Link>
+                        <Link to={'/squads'} style={{ textDecoration: 'none', color: 'white' }}>SQUAD</Link>
+                        <Link to={'/gameplay'} style={{ textDecoration: 'none', color: 'white' }}>SHOWOFF</Link>
+                        <Link to={'/gameplays'} style={{ textDecoration: 'none', color: 'white' }}>SHOWLIST</Link>
                     </Header>
-                {this.state.gameplayInfo.map((spot, index) => {
-                    return (
-                        <Gameplay key={index}
-                            gamertag={spot.gamertag}
-                            _id={spot._id}
-                            getGameplays={this.getGameplays}
-                            url={spot.url}
-                        />
-                    )
-                })}
+                    {this.state.gameplayInfo.map((spot, index) => {
+                        return (
+                            <Gameplay key={index}
+                                gamertag={spot.gamertag}
+                                _id={spot._id}
+                                getGameplays={this.getGameplays}
+                                url={spot.url}
+                            />
+                        )
+                    })}
                 </Body>
             </div>
         );

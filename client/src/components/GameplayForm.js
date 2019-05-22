@@ -5,8 +5,11 @@ import styled from 'styled-components'
 import img from '../images/Page3.png'
 
 const Header = styled.div`
-font-size: 20px;
-text-decoration: none;
+font-size: 30px;
+display: flex;
+justify-content:space-evenly;
+width: 50vw;
+color:solid white;
 `;
 
 const Body = styled.div`
@@ -74,19 +77,19 @@ class GameplayForm extends Component {
         return (
             <div>
                 <Body>
-                <Header>
-                        <Link to={'/'}>Home</Link>
-                        <Link to={'/squads'}>Squads</Link>
-                        <Link to={'/gameplay'}>Showoff</Link>
-                        <Link to={'/gameplays'}>Showdown</Link>
+                    <Header>
+                        <Link to={'/'} style={{ textDecoration: 'none', color: 'white' }}>HOME</Link>
+                        <Link to={'/squads'} style={{ textDecoration: 'none', color: 'white' }}>SQUAD</Link>
+                        <Link to={'/gameplay'} style={{ textDecoration: 'none', color: 'white' }}>SHOWOFF</Link>
+                        <Link to={'/gameplays'} style={{ textDecoration: 'none', color: 'white' }}>SHOWLIST</Link>
                     </Header>
-                <Form onSubmit={this.newGameplay}>
-                    <label htmlFor="gamertag">GamerTag</label>
-                    <Inputy id="gamertag" name="gamertag" placeholder="ex: Snype0nSyte77" type="text" onChange={this.handleChange} />
-                    <label htmlFor="url">Video URL</label>
-                    <Inputy id="url" name="url" type="text" placeholder="ex: youtube.com/fortniteclips" onChange={this.handleChange} />
-                    <Button type="submit">SHOW OFF!</Button>
-                </Form>
+                    <Form onSubmit={this.newGameplay}>
+                        <label htmlFor="gamertag">GamerTag</label>
+                        <Inputy id="gamertag" name="gamertag" placeholder="ex: Snype0nSyte77" type="text" onChange={this.handleChange} />
+                        <label htmlFor="url">Video URL</label>
+                        <Inputy id="url" name="url" type="text" placeholder="ex: youtube.com/fortniteclips" onChange={this.handleChange} />
+                        <Button type="submit">SHOW OFF!</Button>
+                    </Form>
                 </Body>
             </div>
         );
