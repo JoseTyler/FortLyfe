@@ -6,10 +6,14 @@ import img from '../images/Page3.png'
 
 const Header = styled.div`
 font-size: 30px;
+position: relative;
+top: 8px;
+left: 60px;
 display: flex;
 justify-content:space-evenly;
-width: 50vw;
+width: 40vw;
 color:solid white;
+font-family: DK Rumpelstiltskin;
 `;
 
 const Body = styled.div`

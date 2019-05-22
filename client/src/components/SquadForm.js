@@ -8,11 +8,14 @@ import img from "../images/Page1.png"
 // STYLING COMPONENT
 const Header = styled.div`
 font-size: 30px;
+position: relative;
+top: 8px;
+left: 60px;
 display: flex;
 justify-content:space-evenly;
-width: 50vw;
+width: 40vw;
 color:solid white;
-
+font-family: DK Rumpelstiltskin;
 `;
 
 const Body = styled.div`
@@ -88,22 +91,22 @@ class SquadForm extends Component {
                         <Link to={'/'} style={{ textDecoration: 'none', color: 'white' }}>HOME</Link>
                         <Link to={'/squads'} style={{ textDecoration: 'none', color: 'white' }}>SQUAD</Link>
                         <Link to={'/gameplay'} style={{ textDecoration: 'none', color: 'white' }}>SHOWOFF</Link>
-                        <Link to={'/gameplays'} style={{ textDecoration: 'none',color: 'white' }}>SHOWLIST</Link>
+                        <Link to={'/gameplays'} style={{ textDecoration: 'none', color: 'white' }}>SHOWLIST</Link>
                     </Header>
-                    
-                        <Form onSubmit={this.newSquad}>
-                            <label htmlFor="gamertag">GAMERTAG:</label>
-                            <Inputy id="gamertag" name="gamertag" placeholder="ex: Snype0nSyte77" type="text" onChange={this.handleChange} />
-                            <label htmlFor="name">NAME:</label>
-                            <Inputy id="name" name="name" type="text" placeholder="ex: Adam Hues" onChange={this.handleChange} />
-                            <label htmlFor="age">AGE:</label>
-                            <Inputy id="age" name="age" type="text" placeholder="ex: 22" onChange={this.handleChange} />
-                            <label htmlFor="platform">PLATFORM:</label>
-                            <Inputy id="platform" name="platform" type="text" placeholder="ex: Playstation" onChange={this.handleChange} />
-                            <Button type="submit">SQUAD UP!</Button>
-                        </Form>
-                    
-                    
+
+                    <Form onSubmit={this.newSquad}>
+                        <label htmlFor="gamertag">GAMERTAG:</label>
+                        <Inputy id="gamertag" name="gamertag" placeholder="ex: Snype0nSyte77" type="text" onChange={this.handleChange} />
+                        <label htmlFor="name">NAME:</label>
+                        <Inputy id="name" name="name" type="text" placeholder="ex: Adam Hues" onChange={this.handleChange} />
+                        <label htmlFor="age">AGE:</label>
+                        <Inputy id="age" name="age" type="text" placeholder="ex: 22" onChange={this.handleChange} />
+                        <label htmlFor="platform">PLATFORM:</label>
+                        <Inputy id="platform" name="platform" type="text" placeholder="ex: Playstation" onChange={this.handleChange} />
+                        <Button type="submit">SQUAD UP!</Button>
+                    </Form>
+
+
                 </Body>
             </div>
         );
