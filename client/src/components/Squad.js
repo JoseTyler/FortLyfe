@@ -16,10 +16,14 @@ padding-top: 200px;
 
 
 const Button = styled.button`
-position: relative;
-    left: 120px;
-
-`
+    height: 25px;
+    font-size: 15px;
+    background-color: blue;
+    position: relative;
+    left: 98px;
+    top: 15px;
+    border: solid black 2px;
+`;
 
 
 

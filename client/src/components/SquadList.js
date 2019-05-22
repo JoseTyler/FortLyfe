@@ -20,6 +20,8 @@ const Body = styled.div`
     
     `;
 
+    
+
 
 class SquadList extends Component {
     state = {

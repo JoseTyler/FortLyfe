@@ -24,13 +24,26 @@ const Form = styled.form`
     flex-direction: column;
     align-items:center;
     height: 50vh;
-    padding-left: 290px;
+    padding-left: 190px;
     padding-top: 200px;
     
 `;
 
 const Inputy = styled.input`
     display: block;
+    height:30px;
+    width:300px;
+    font-size: 20px;
+`;
+
+const Button = styled.button`
+    height:30px;
+    font-size: 20px;
+    background-color: orange;
+    position: relative;
+    left: 90px;
+    top: 25px;
+    border: solid black 2px;
 `;
 
 class GameplayForm extends Component {
@@ -72,7 +85,7 @@ class GameplayForm extends Component {
                     <Inputy id="gamertag" name="gamertag" placeholder="ex: Snype0nSyte77" type="text" onChange={this.handleChange} />
                     <label htmlFor="url">Video URL</label>
                     <Inputy id="url" name="url" type="text" placeholder="ex: youtube.com/fortniteclips" onChange={this.handleChange} />
-                    <button type="submit" >SHOW OFF!</button>
+                    <Button type="submit">SHOW OFF!</Button>
                 </Form>
                 </Body>
             </div>

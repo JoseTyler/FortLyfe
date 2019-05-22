@@ -8,6 +8,15 @@ padding-left: 120px;
 padding-top: 170px;
 `
 
+const Button = styled.button`
+    height:30px;
+    font-size: 20px;
+    background-color: Fuchsia;
+    position: relative;
+    right: 300px;
+    top: 35px;
+`;
+
 class Gameplay extends Component {
     state = {
         showForm: false,
@@ -53,7 +62,7 @@ class Gameplay extends Component {
                         <p>GamerTag: {this.props.gamertag} </p>
                         {/* <p>{this.props.url}</p> */}
                         <iframe width="453" height="236" src={this.state.formInfo.url} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        <button onClick={this.deleteGameplay}>Delete Gameplay</button>
+                        <Button onClick={this.deleteGameplay}>Delete Gameplay</Button>
                     </Div>
                 }
             </div>
