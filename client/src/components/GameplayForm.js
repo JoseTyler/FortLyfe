@@ -67,9 +67,9 @@ class GameplayForm extends Component {
                         <Link to={'/gameplays'}>Showdown</Link>
                     </Header>
                 <Form onSubmit={this.newGameplay}>
-                    <label htmlFor="gamertag">GamerTag:</label>
+                    <label htmlFor="gamertag">GamerTag</label>
                     <Inputy id="gamertag" name="gamertag" placeholder="ex: Snype0nSyte77" type="text" onChange={this.handleChange} />
-                    <label htmlFor="url">Name:</label>
+                    <label htmlFor="url">Video URL</label>
                     <Inputy id="url" name="url" type="text" placeholder="ex: youtube.com/fortniteclips" onChange={this.handleChange} />
                     <button type="submit" >SHOW OFF!</button>
                 </Form>

@@ -26,14 +26,26 @@ const Form = styled.form`
     flex-direction: column;
     align-items:center;
     height: 50vh;
-    padding-left: 1030px;
+    padding-left: 960px;
     padding-top: 350px;
     
 `;
 
 const Inputy = styled.input`
     display: block;
+    height:30px;
+    width:300px;
+    font-size: 20px;
     
+`;
+
+const Button = styled.button`
+    height:30px;
+    font-size: 20px;
+    background-color: green;
+    border-radius:20px;
+
+
 `
 
 
@@ -84,7 +96,7 @@ class SquadForm extends Component {
                             <Inputy id="age" name="age" type="text" placeholder="ex: 22" onChange={this.handleChange} />
                             <label htmlFor="platform">PLATFORM:</label>
                             <Inputy id="platform" name="platform" type="text" placeholder="ex: Playstation" onChange={this.handleChange} />
-                            <button type="submit">SQUAD UP!</button>
+                            <Button type="submit">SQUAD UP!</Button>
                         </Form>
                     
                     
