@@ -50,7 +50,7 @@ class SquadList extends Component {
                     return (
                         
                         <Squad 
-                             key={index}
+                            key={index}
                             gamertag={spot.gamertag}
                             name={spot.name}
                             _id={spot._id}

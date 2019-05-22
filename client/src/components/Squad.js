@@ -1,5 +1,30 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import styled from 'styled-components'
+
+
+const P = styled.a`
+font-size: 20px;
+display: flex;
+flex-direction: column;
+padding-left: 110px;
+`;
+
+const Info = styled.div`
+padding-top: 200px;
+`;
+
+
+const Button = styled.button`
+position: relative;
+    left: 120px;
+
+`
+
+
+
+
+
 
 class Squad extends Component {
     state = {
@@ -64,14 +89,14 @@ class Squad extends Component {
                         <input id="platform" name="platform" type="text" placeholder={this.props.platform} onChange={this.handleChange} />
                         <button onClick={this.setState.swapForm} >SUBMIT EDIT!</button>
                     </form>
-                    : <div>
-                        <p>Gamertag: {this.props.gamertag}</p>
-                        <p>Name: {this.props.name}</p>
-                        <p>Age: {this.props.age}</p>
-                        <p>Platform: {this.props.platform}</p>
-                        <button onClick={this.swapForm}>EDIT PLAYER</button>
-                        <button onClick={this.deletePlayer}>DELETE PLAYER</button>
-                    </div>
+                    : <Info>
+                        <P>Gamertag: {this.props.gamertag}</P>
+                        <P>Name: {this.props.name}</P>
+                        <P>Age: {this.props.age}</P>
+                        <P>Platform: {this.props.platform}</P>
+                        <Button onClick={this.swapForm}>EDIT PLAYER</Button>
+                        <Button onClick={this.deletePlayer}>DELETE PLAYER</Button>
+                    </Info>
                 }
             </div>
         );

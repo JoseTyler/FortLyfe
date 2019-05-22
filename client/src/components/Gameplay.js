@@ -1,5 +1,12 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import styled from 'styled-components';
+
+
+const Div = styled.div`
+padding-left: 120px;
+padding-top: 170px;
+`
 
 class Gameplay extends Component {
     state = {
@@ -42,12 +49,12 @@ class Gameplay extends Component {
             <div>
                 {this.state.showForm
                     ? null
-                    : <div>
-                        <p>{this.props.gamertag} </p>
-                        <p>{this.props.url}</p>
-                        <iframe width="953" height="536" src={this.state.formInfo.url} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    : <Div>
+                        <p>GamerTag: {this.props.gamertag} </p>
+                        {/* <p>{this.props.url}</p> */}
+                        <iframe width="453" height="236" src={this.state.formInfo.url} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         <button onClick={this.deleteGameplay}>Delete Gameplay</button>
-                    </div>
+                    </Div>
                 }
             </div>
         );

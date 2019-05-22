@@ -14,7 +14,23 @@ background-image: url(${img});
 height: 100vh;
 width: 100vw;
 background-size: cover;
-`
+position: sticky;
+`;
+
+const Form = styled.form`
+    font-size: 30px;
+    display: block;
+    flex-direction: column;
+    align-items:center;
+    height: 50vh;
+    padding-left: 290px;
+    padding-top: 200px;
+    
+`;
+
+const Inputy = styled.input`
+    display: block;
+`;
 
 class GameplayForm extends Component {
     state = {
@@ -50,13 +66,13 @@ class GameplayForm extends Component {
                         <Link to={'/gameplay'}>Showoff</Link>
                         <Link to={'/gameplays'}>Showdown</Link>
                     </Header>
-                <form onSubmit={this.newGameplay}>
+                <Form onSubmit={this.newGameplay}>
                     <label htmlFor="gamertag">GamerTag:</label>
-                    <input id="gamertag" name="gamertag" placeholder="ex: Snype0nSyte77" type="text" onChange={this.handleChange} />
+                    <Inputy id="gamertag" name="gamertag" placeholder="ex: Snype0nSyte77" type="text" onChange={this.handleChange} />
                     <label htmlFor="url">Name:</label>
-                    <input id="url" name="url" type="text" placeholder="ex: youtube.com/fortniteclips" onChange={this.handleChange} />
+                    <Inputy id="url" name="url" type="text" placeholder="ex: youtube.com/fortniteclips" onChange={this.handleChange} />
                     <button type="submit" >SHOW OFF!</button>
-                </form>
+                </Form>
                 </Body>
             </div>
         );
