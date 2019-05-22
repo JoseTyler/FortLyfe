@@ -15,6 +15,7 @@ height: 100vh;
 width: 100vw;
 background-size: cover;
 position: sticky;
+top: 0;
 `;
 
 const Form = styled.form`

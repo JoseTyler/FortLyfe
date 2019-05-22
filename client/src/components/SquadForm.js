@@ -7,9 +7,8 @@ import img from "../images/Page1.png"
 
 // STYLING COMPONENT
 const Header = styled.div`
-font-size: 20px;
+font-size: 30px;
 text-decoration: none;
-word-spacing: 420px;
 `;
 
 const Body = styled.div`
@@ -43,7 +42,9 @@ const Button = styled.button`
     height:30px;
     font-size: 20px;
     background-color: green;
-    border-radius:20px;
+    position: relative;
+    left: 90px;
+    top: 25px;
 
 
 `
@@ -81,10 +82,10 @@ class SquadForm extends Component {
             <div>
                 <Body>
                     <Header>
-                        <Link to={'/'}>Home</Link>
-                        <Link to={'/squads'}>Squads</Link>
+                        <Link to={'/'}>Create</Link>
+                        <Link to={'/squads'}>Squad</Link>
                         <Link to={'/gameplay'}>Showoff</Link>
-                        <Link to={'/gameplays'}>Showdown</Link>
+                        <Link to={'/gameplays'}>ShowList</Link>
                     </Header>
                     
                         <Form onSubmit={this.newSquad}>

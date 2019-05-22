@@ -8,13 +8,17 @@ import { Link } from "react-router-dom"
 const Header = styled.div`
 font-size: 20px;
 text-decoration: none;
+border-bottom: none;
 `;
+
 
 const Body = styled.div`
 background-image: url(${img});
 height: 100vh;
 width: 100vw;
 background-size: cover;
+position: sticky;
+top: 0;
 `
 
 class GameplayList extends Component {
