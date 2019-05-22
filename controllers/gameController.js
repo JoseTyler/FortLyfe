@@ -1,5 +1,6 @@
 const Gameplay = require("../models/Gameplay");
 
+
 const gameController = {
   // INDEX
   index: function (req, res) {

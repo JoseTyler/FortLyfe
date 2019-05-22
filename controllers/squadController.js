@@ -1,5 +1,6 @@
 const Squad = require("../models/Squad");
 
+
 const squadController = {
   // INDEX
   index: function (req, res) {
