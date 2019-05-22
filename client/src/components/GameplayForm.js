@@ -26,13 +26,14 @@ top: 0;
 `;
 
 const Form = styled.form`
-    font-size: 30px;
+    font-size: 40px;
     display: block;
     flex-direction: column;
     align-items:center;
     height: 50vh;
     padding-left: 190px;
-    padding-top: 200px;
+    padding-top: 175px;
+    font-family: Mushy Love;
     
 `;
 

@@ -27,13 +27,14 @@ const Body = styled.div`
     `;
 
 const Form = styled.form`
-    font-size: 30px;
+    font-size: 40px;
     display: block;
     flex-direction: column;
     align-items:center;
     height: 50vh;
     padding-left: 960px;
     padding-top: 350px;
+    font-family: Mushy Love;
     
 `;
 
